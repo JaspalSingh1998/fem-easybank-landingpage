@@ -15,6 +15,10 @@ body {
   font-size: $font-md;
   color: $grayishBlue;
   font-weight: 300;
+
+  &.noscroll {
+    overflow: hidden;
+  }
 }
 a:link,
 a:visited,
@@ -22,6 +26,9 @@ a:hover,
 a:active {
   font-weight: 400;
   text-decoration: none;
+}
+.container {
+  padding: 0 1.5rem;
 }
 // Flexbox
 .flex {
