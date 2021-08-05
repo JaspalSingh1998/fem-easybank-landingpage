@@ -1,0 +1,64 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.1;
+  font-family: "Public Sans", sans-serif;
+  font-size: $font-md;
+  color: $grayishBlue;
+  font-weight: 300;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  font-weight: 400;
+  text-decoration: none;
+}
+// Flexbox
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+  &-jc-c {
+    justify-content: center;
+  }
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+button,
+.button {
+  cursor: pointer;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  background: linear-gradient(to right, $limeGreen, $brightCyan);
+  border: none;
+  outline: none;
+  color: $white;
+}
+
+// Visibility
+.hide-for-mobile {
+  // hide for tablet and mobile
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+.hide-for-desktop {
+  // hide for desktop
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
